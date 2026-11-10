@@ -1,0 +1,38 @@
+{
+  "name": "run_test_unpaired_part",
+  "model": "DV-P1",
+  "setup": [
+    {
+      "method": "enter_repair_mode",
+      "params": {}
+    },
+    {
+      "method": "replace_part",
+      "params": {
+        "component": "display",
+        "part_serial": "GP-DIS123456-9"
+      }
+    }
+  ],
+  "request": {
+    "id": 3,
+    "method": "run_test",
+    "params": {
+      "test_id": "display.pixels"
+    }
+  },
+  "response": {
+    "id": 3,
+    "result": {
+      "test": "display.pixels",
+      "status": "fail",
+      "reason": "UNPAIRED_PART",
+      "measurements": {},
+      "duration_ms": 0.004
+    }
+  },
+  "exact": [
+    "result.status",
+    "result.reason"
+  ]
+}

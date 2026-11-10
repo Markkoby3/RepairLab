@@ -1,0 +1,33 @@
+{
+  "name": "replace_part_ok",
+  "model": "DV-P1",
+  "setup": [
+    {
+      "method": "enter_repair_mode",
+      "params": {}
+    }
+  ],
+  "request": {
+    "id": 4,
+    "method": "replace_part",
+    "params": {
+      "component": "display",
+      "part_serial": "GP-DIS123456-9"
+    }
+  },
+  "response": {
+    "id": 4,
+    "result": {
+      "component": "display",
+      "serial": "GP-DIS123456-9",
+      "paired": false,
+      "calibrated": false
+    }
+  },
+  "exact": [
+    "result.component",
+    "result.serial",
+    "result.paired",
+    "result.calibrated"
+  ]
+}

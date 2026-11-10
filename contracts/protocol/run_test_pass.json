@@ -1,0 +1,30 @@
+{
+  "name": "run_test_pass",
+  "model": "DV-P1",
+  "setup": [],
+  "request": {
+    "id": 2,
+    "method": "run_test",
+    "params": {
+      "test_id": "battery.health"
+    }
+  },
+  "response": {
+    "id": 2,
+    "result": {
+      "test": "battery.health",
+      "status": "pass",
+      "reason": null,
+      "measurements": {
+        "max_capacity_pct": 93.4,
+        "cycle_count": 120
+      },
+      "duration_ms": 0.011
+    }
+  },
+  "exact": [
+    "result.test",
+    "result.status",
+    "result.reason"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "hello",
+  "model": "DV-P1",
+  "setup": [],
+  "request": {
+    "id": 1,
+    "method": "hello",
+    "params": {}
+  },
+  "response": {
+    "id": 1,
+    "result": {
+      "protocol": "1.2",
+      "serial": "DVP199000"
+    }
+  },
+  "exact": [
+    "id",
+    "result.protocol"
+  ]
+}

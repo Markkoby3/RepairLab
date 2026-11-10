@@ -1,0 +1,20 @@
+{
+  "name": "error_unknown_method",
+  "model": "DV-P1",
+  "setup": [],
+  "request": {
+    "id": 6,
+    "method": "self_destruct",
+    "params": {}
+  },
+  "response": {
+    "id": 6,
+    "error": {
+      "code": "UNKNOWN_METHOD",
+      "message": "no such method: self_destruct"
+    }
+  },
+  "exact": [
+    "error.code"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "states": [
+    "intake",
+    "diagnosed",
+    "in_repair",
+    "part_replaced",
+    "paired",
+    "calibrated",
+    "verified",
+    "released",
+    "failed"
+  ],
+  "transitions": {
+    "intake": [
+      "diagnosed"
+    ],
+    "diagnosed": [
+      "in_repair",
+      "released"
+    ],
+    "in_repair": [
+      "part_replaced"
+    ],
+    "part_replaced": [
+      "calibrated",
+      "paired",
+      "verified"
+    ],
+    "paired": [
+      "calibrated",
+      "verified"
+    ],
+    "calibrated": [
+      "verified"
+    ],
+    "verified": [
+      "released"
+    ],
+    "released": [],
+    "failed": []
+  },
+  "required_steps": {
+    "battery": [
+      "paired"
+    ],
+    "biometric": [
+      "paired",
+      "calibrated"
+    ],
+    "camera": [
+      "paired",
+      "calibrated"
+    ],
+    "display": [
+      "paired",
+      "calibrated"
+    ],
+    "keyboard": [],
+    "speaker": []
+  }
+}

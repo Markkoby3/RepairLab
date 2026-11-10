@@ -1,0 +1,29 @@
+{
+  "name": "error_non_genuine_part",
+  "model": "DV-P1",
+  "setup": [
+    {
+      "method": "enter_repair_mode",
+      "params": {}
+    }
+  ],
+  "request": {
+    "id": 5,
+    "method": "replace_part",
+    "params": {
+      "component": "display",
+      "part_serial": "GP-DIS123456-0"
+    }
+  },
+  "response": {
+    "id": 5,
+    "error": {
+      "code": "NON_GENUINE_PART",
+      "message": "GP-DIS123456-0 failed authentication for display"
+    }
+  },
+  "exact": [
+    "error.code",
+    "error.message"
+  ]
+}
